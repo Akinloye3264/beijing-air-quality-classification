@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project data and generated model artifacts
+data/
+models/
+logs/
+*.zip
+*.joblib
+*.keras
+*.h5
