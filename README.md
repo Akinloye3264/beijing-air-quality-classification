@@ -2,6 +2,11 @@
 
 This project compares traditional machine-learning and deep-learning approaches for classifying hourly air-quality conditions in Beijing into four PM2.5 severity groups. It uses a leakage-aware chronological split so that models are evaluated on observations collected after the training period.
 
+## Project links
+
+- [Video presentation](https://youtu.be/kjr3i276fxQ)
+- [Completed notebook](notebook/Beijing_Air_Quality_Classification.ipynb)
+
 ## Project overview
 
 The analysis uses the Beijing Multi-Site Air Quality dataset, which contains hourly pollutant and meteorological measurements from 12 monitoring stations between March 2013 and February 2017. The raw data contains 420,768 observations; 412,029 observations remain after rows with missing PM2.5 targets are removed.
@@ -10,9 +15,9 @@ The four project-defined target classes are:
 
 | Class | Label | PM2.5 range |
 |---:|---|---:|
-| 0 | Low | ≤ 35.4 |
-| 1 | Elevated | 35.4–55.4 |
-| 2 | High | 55.4–150.4 |
+| 0 | Low | <= 35.4 |
+| 1 | Elevated | > 35.4–55.4 |
+| 2 | High | > 55.4–150.4 |
 | 3 | Very High | > 150.4 |
 
 These labels are grouped concentration bands for this project and should not be interpreted as the complete official AQI classification system.
@@ -88,14 +93,14 @@ Histogram Gradient Boosting produced the strongest final performance. The Elevat
 
 ```text
 .
-├── notebook/
-│   └── Beijing_Air_Quality_Classification.ipynb
-├── results/
-│   └── figures/
-├── .gitignore
-├── LICENSE
-├── README.md
-└── requirements.txt
+|-- notebook/
+|   `-- Beijing_Air_Quality_Classification.ipynb
+|-- results/
+|   `-- figures/
+|-- .gitignore
+|-- LICENSE
+|-- README.md
+`-- requirements.txt
 ```
 
 The raw dataset, saved model files, preprocessing artifacts, and TensorBoard logs are stored separately in Google Drive and are intentionally excluded from this repository.

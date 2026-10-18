@@ -227,3 +227,5 @@ logs/
 *.joblib
 *.keras
 *.h5
+*.mp4
+report/*Draft*.pdf
